@@ -1,0 +1,161 @@
+/* General reset and container adjustments */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* Navbar styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: darkcyan;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.nav h1 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+/* Header styling */
+.header {
+    background-image: url(./images/pexels-ella-olsson-572949-1640772.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input, form button {
+    margin: 5px;
+}
+
+/* Output section */
+.output {
+    background-color: darkslategray;
+    padding: 20px;
+}
+
+.output h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.outpcontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Meal cards */
+.meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkgray;
+    padding: 15px;
+    border-radius: 15px;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.meal img {
+    border-radius: 15px;
+    max-height: 200px;
+    width: 100%;
+}
+
+.meal h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Form and button responsiveness */
+input {
+    font-size: 16px;
+    max-width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(173, 180, 70);
+    color: white;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .header {
+        height: 300px;
+    }
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav h1 {
+        font-size: 20px;
+    }
+
+    .meal h1 {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 200px;
+    }
+
+    .meal {
+        padding: 10px;
+    }
+
+    .meal h1 {
+        font-size: 14px;
+    }
+
+    .outpcontent {
+        grid-template-columns: 1fr;
+    }
+}

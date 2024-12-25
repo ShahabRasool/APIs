@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+    <style>
+        .container{
+            margin-left: auto;
+            margin-right: auto;
+            background-color: thistle;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+         img{
+            width: 50%;
+            height: 30%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="output"></div>
+        <div class="input">
+            <form id="search">
+                <label for="">Search :
+                    <input type="number" id="searchid" placeholder="Enter the id">
+                </label>
+                <button type="search" value="search">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
